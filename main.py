@@ -122,10 +122,12 @@ def cmp_add_client():
         return False
 
 
-    client = transport.client.Client
-    client.name = str(input("Введите имя клиетна: "))
-    client.cargo_weight = float(input("Введите вес груза клиента: "))
-    client.is_vip = bool(input("Является ли VIP (True / False): "))
+    client = transport.client.Client(
+    name=str(input("Введите имя клиента: ")),
+    cargo_weight=float(input("Введите вес груза клиента: ")),
+    is_vip=bool(input("Является ли VIP (True / False): "))
+    )
+
 
     transport_company.add_client(client)
     transport_company.add_client_obj(client)
