@@ -35,13 +35,13 @@ class TransportCompany:
             if (client.is_vip == True):
                 for veh in self.vehicles_obj:
                     if (veh.current_load > client.cargo_weight):
-                        veh.load_cargo(client, veh)
+                        veh.load_cargo(client)
         
         for client in self.clients_obj:
             if (client.is_vip == False):
                 for veh in self.vehicles_obj:
                     if (veh.current_load > client.cargo_weight):
-                        veh.load_cargo(client, veh)
+                        veh.load_cargo(client)
 
         print("Оптимизация загрузки завершена!")
 
